@@ -32,22 +32,29 @@ body {
 
 .center {
 	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
+	margin: 4em auto 2.5em auto;
 }
 
 .container {
 	max-width: 90%;
 	display: grid;
-	gap: 1rem;
+	gap: 1.5rem;
 	/* grid-template-columns: repeat(4, 1fr); */
 	color: var(--desaturated-blue);
 }
 
 .card {
+	border-radius: 0.8rem;
+}
+
+/* User card */
+.user-card {
 	background-color: var(--dark-blue);
-	border-radius: 0.6rem;
 }
 
 .user {
@@ -57,7 +64,7 @@ body {
 	gap: 1rem;
 	background-color: var(--blue);
 	padding: 1.5em 1em;
-	border-radius: 0.6rem;
+	border-radius: 0.8rem;
 }
 
 .user-img {
@@ -79,7 +86,7 @@ body {
 	color: white;
 }
 
-.time {
+.user-card .time {
 	display: flex;
 	justify-content: space-between;
 	padding: 1.3em 2em;
@@ -87,8 +94,95 @@ body {
 	font-size: 1rem;
 }
 
-.time li:hover {
+.time a {
+	text-decoration: none;
+	color: var(--pale-blue);
+}
+
+.time a:hover {
 	color: white;
+}
+
+/* Activity card */
+.decoration {
+	display: flex;
+	justify-content: flex-end;
+	border-radius: 0.8rem 0.8rem 0 0;
+	padding-right: 0.8em;
+	height: 2.5rem;
+}
+
+.decoration img {
+	width: 5rem;
+	object-fit: none;
+	object-position: 100% 25%;
+}
+
+.content {
+	padding: 1.5em 1em;
+	border-radius: 0.8rem;
+	background-color: var(--dark-blue);
+}
+
+.content:hover {
+	/* filter: brightness(150%); */
+	background-color: hsl(236, 41%, 34%);
+}
+
+.category {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 0.5em;
+}
+
+.category-name {
+	font-weight: 500;
+	font-size: 1em;
+	color: white;
+}
+
+.data {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0;
+	font-weight: 300;
+}
+
+.current-data {
+	color: white;
+	font-size: 2rem;
+}
+
+.previous-data {
+	color: var(--pale-blue);
+	font-size: 0.9rem;
+}
+
+/* Uitilities */
+.light-red {
+	background-color: var(--light-red);
+}
+
+.soft-blue {
+	background-color: var(--soft-blue);
+}
+
+.red {
+	background-color: var(--red);
+}
+
+.lime-green {
+	background-color: var(--lime-green);
+}
+
+.violet {
+	background-color: var(--violet);
+}
+
+.soft-orange {
+	background-color: var(--soft-orange);
 }
 
 /* Atrribution */
