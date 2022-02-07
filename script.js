@@ -5,4 +5,6 @@ const data = fetch('./data.json')
 
 
 function hello()
+function hi {
 
+}
