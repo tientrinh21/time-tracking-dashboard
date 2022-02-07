@@ -4,4 +4,5 @@ const data = fetch('./data.json')
 	.catch(err => console.error('Error: ' + err))
 
 
-function hello() 
+function hello()
+
