@@ -25,7 +25,6 @@ body {
 	font-family: 'Rubik', sans-serif;
 	font-size: 18px;
 	background-color: var(--very-dark-blue);
-	max-width: 1440px;
 	color: white;
 	font-weight: 400;
 }
@@ -36,18 +35,21 @@ body {
 	gap: 1.5rem;
 	align-items: center;
 	justify-content: center;
-	min-height: 100vh;
 	margin: 4em auto 2.5em auto;
 }
 
 .container {
-	max-width: 90%;
+	width: 95%;
+	max-width: 375px;
+	min-width: 270px;
 	display: grid;
 	gap: 1.5rem;
 	color: var(--desaturated-blue);
 }
 
 .card {
+	display: flex;
+	flex-direction: column;
 	border-radius: 0.8rem;
 }
 
@@ -66,8 +68,8 @@ body {
 	border-radius: 0.8rem;
 }
 
-.user-img {
-	max-width: 25%;
+.user .user-img {
+	max-width: 15%;
 	border: solid 0.15rem white;
 	border-radius: 100%;
 }
@@ -80,7 +82,7 @@ body {
 	font-weight: 300;
 }
 
-.user p > span {
+.user .user-name {
 	font-size: 1.5rem;
 	color: white;
 }
@@ -88,9 +90,10 @@ body {
 .user-card .time {
 	display: flex;
 	justify-content: space-between;
-	padding: 1.3em 2em;
+	padding: 1.3em 1.5em;
 	list-style: none;
 	font-size: 1rem;
+	gap: 1rem;
 }
 
 .time a {
@@ -103,7 +106,7 @@ body {
 }
 
 /* Activity card */
-.decoration {
+.activity-card .decoration {
 	display: flex;
 	justify-content: flex-end;
 	border-radius: 0.8rem 0.8rem 0 0;
@@ -117,7 +120,7 @@ body {
 	object-position: 100% 25%;
 }
 
-.content {
+.activity-card .content {
 	padding: 1.5em 1em;
 	border-radius: 0.8rem;
 	background-color: var(--dark-blue);
@@ -135,6 +138,14 @@ body {
 	margin-bottom: 0.5em;
 }
 
+.category img {
+	padding: 0.5em 0;
+}
+
+.category img:hover {
+	cursor: pointer;
+}
+
 .category-name {
 	font-weight: 500;
 	font-size: 1em;
@@ -146,6 +157,7 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	padding: 0;
+	gap: 1.25rem;
 	font-weight: 300;
 }
 
@@ -185,9 +197,75 @@ body {
 }
 
 /* Media */
-@media (min-width: 700px) {
+@media (min-width: 825px) {
+	body {
+		height: 100vh;
+	}
+
+	.center {
+		margin: 0 auto;
+		height: 100%;
+	}
+
 	.container {
+		max-width: 950px;
 		grid-template-columns: repeat(4, 1fr);	
+		grid-template-rows: repeat(2, 1fr);
+	}
+
+	.user-card {
+		grid-row: span 2;
+	}
+
+	.user-card .user {
+		height: 100%;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		gap: 2.5rem;
+		padding: 1.5em 1.5em;
+	}
+
+	.user .user-img {
+		max-width: 45%;
+	}
+
+	.user .user-img:hover {
+		cursor: pointer;
+	}
+
+	.user p {
+		font-size: 0.8rem;
+	}
+
+	.user .user-name {
+		font-size: 2.25rem;
+		padding: 0.2em 0;
+	}
+
+	.user-card .time {
+		flex-direction: column;
+		gap: 1.3rem;
+	}
+
+	.activity-card {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.activity-card .content {
+		padding: 1.5em 1.5em;
+	}
+
+	.data {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.5rem;
+		margin-top: 1.25em;
+	}
+	
+	.current-data {
+		font-size: 2.75rem;
 	}
 }
 
