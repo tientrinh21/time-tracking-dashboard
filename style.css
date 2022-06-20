@@ -93,15 +93,20 @@ body {
 	padding: 1.3em 1.5em;
 	list-style: none;
 	font-size: 1rem;
-	gap: 1rem;
 }
 
-.time a {
-	text-decoration: none;
+.time button {
+	font-family: 'Rubik', sans-serif;
+	font-size: 1rem;
 	color: var(--pale-blue);
+	padding: .25em 0em;
+	background-color: transparent;
+	text-decoration: none;
+	border-style: none;
 }
 
-.time a:hover {
+.time button:hover {
+	cursor: pointer;
 	color: white;
 }
 
@@ -246,6 +251,10 @@ body {
 	.user-card .time {
 		flex-direction: column;
 		gap: 1.3rem;
+	}
+
+	.time button {
+		padding: .25em 1em .25em 0em;
 	}
 
 	.activity-card {
