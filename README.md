@@ -7,6 +7,7 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 - [Screenshot](#screenshot)
 - [Links](#links)
 - [Built with](#built-with)
+- [Author](#author)
 
 
 ## The challenge
@@ -33,3 +34,9 @@ Users should be able to:
 - CSS custom properties
 - Mobile-first workflow
 - Vanilla JS
+
+
+## Author
+
+- Website - [Tien Trinh](https://tientrinh.netlify.app/)
+- Frontend Mentor - [@tientrinh21](https://www.frontendmentor.io/profile/tientrinh21)
